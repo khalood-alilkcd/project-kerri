@@ -1,0 +1,189 @@
+:root{
+    --main-color: rgb(250, 54, 54);
+    --head-color: rgb(179, 175, 175);
+    --grey-color: rgb(104, 103, 103);
+}
+@font-face {
+    font-family: 'Ubuntu-BoldItalic';
+    src: url('../fonts/Ubuntu-BoldItalic.ttf');
+}
+h1, h2, h3, h4, h5 ,h6{
+    font-family: 'Ubuntu-BoldItalic';
+}
+.main-color{
+    color: var(--main-color) !important;
+    /* background-color: var(--main-color); */
+}
+
+ul {
+    font-family: 'Ubuntu-BoldItalic' !important;
+    
+}
+ul li{
+    padding: 0 1.5rem;
+}
+/* -------------------------------------------------------------------------- */
+/*                                  startHome                                 */
+/* -------------------------------------------------------------------------- */
+
+#home{
+    background-image: url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+.header{
+    font-family: 'Ubuntu-BoldItalic';
+}
+.icon-item{
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid var(--grey-color);
+}
+#about{
+    background-image: url('../images/light_dot.jpeg');
+   
+}
+#about .title h2{
+    color: var(--head-color);
+        font-size: 4rem;
+        font-weight: bold;
+        letter-spacing:.5rem;
+}
+#about .title h4{
+    color: var(--grey-color);
+    font-size: 2rem;
+    font-weight: bold;
+}
+#about .content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+/* -------------------------------------------------------------------------- */
+/*                                  startHome                                 */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                                  start content                                */
+/* -------------------------------------------------------------------------- */
+
+#content{
+    background-image: url('../images/dark_dot.jpeg');
+}
+#content .title h2{
+    color: var(--grey-color);
+        font-size: 4rem;
+        font-weight: bold;
+        letter-spacing:.5rem;
+}
+#content .title h4{
+    color: var(--head-color);
+    font-size: 2rem;
+    font-weight: bold;
+}
+h2{
+    position:relative;
+}
+.hoverItem h2::after{
+    content: '';
+    width: 3rem;
+    height: 3px;
+    background-color: var(--main-color);
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    bottom: 0;
+    transition: width 2s;
+}
+.hoverItem:hover h2::after{
+    width: 6rem;
+}
+#content .icon-item{
+    top: 0;
+    left: 50%;
+    width: 5rem;
+    height: 5rem;
+    border: 3px solid #fff;
+    color: var(--grey-color);
+    background-color: rgb(34, 33, 33);
+    transition: color 2s ;
+}
+
+#content .hoverItem:hover .icon-item{
+    color: var(--main-color);
+}
+/* -------------------------------------------------------------------------- */
+/*                                  end content                                */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                                  start service                                */
+/* -------------------------------------------------------------------------- */
+#services{
+    background-image: url('../images/light_dot.jpeg');
+}
+#services .title h2{
+    color: var(--head-color);
+        font-size: 4rem;
+        font-weight: bold;
+        letter-spacing:.5rem;
+}
+#services .title h4{
+    color: var(--grey-color);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.item-content{
+    width: 95%;
+    height: 95%;
+    background-color: #fff9;
+    left: 2.5%;
+    top: -100%;
+    transition: top 2s;
+}
+.item-services img{
+    filter: grayscale(0%);
+    transition: filter 4s;
+}
+.item-services:hover {
+    filter: grayscale(100%);
+}
+.item-services:hover .item-content{
+    top: 0%;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  end service                                */
+/* -------------------------------------------------------------------------- */
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                  end blog                                */
+/* -------------------------------------------------------------------------- */
+#blog{
+    background-image: url('../images/overlay-bg.jpg');
+    height: auto;
+    background-size: cover;
+    background-position: center center;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: var(--main-color);
+    background-color: transparent;
+}
+
+.tab-content .tab-pane .roundImg{
+    border: 3px solid rgba(216, 214, 214, 0.747);
+    width: 6rem;
+    height: 6rem;
+    margin: auto;
+}
+.tab-content .tab-pane{
+    text-align: center !important;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                  end blog                                */
+/* -------------------------------------------------------------------------- */
